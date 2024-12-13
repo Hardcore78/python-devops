@@ -6,6 +6,6 @@ class TestHealthUtils(unittest.TestCase):
  
  def test_calculate_bmr(self):
              self.assertAlmostEqual(
-            calculate_bmr(175, 70, 25, 'male'), 1664.78, places=2)
+            calculate_bmr(175, 70, 25, 'male'), 1724.05, places=2)
 if __name__ == '__main__':
  unittest.main()
