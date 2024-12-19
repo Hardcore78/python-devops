@@ -23,7 +23,8 @@ test:
 
 # Test API endpoint
 test-api:
-	curl http://localhost:$(ports)
+	curl http://$(shell docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' papp):5000
+
 
 # Run Docker container with port mapping
 build-image:
